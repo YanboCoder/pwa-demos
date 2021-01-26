@@ -1,0 +1,43 @@
+{
+  "name": "Mini app to try PWA",
+  "short_name": "Mini PWA",
+  "description": "Mini app to try PWA",
+  "display": "standalone",
+  "start_url": "/pwa-demos/minipwa/index.html",
+  "background_color": "#426898",
+  "scope": "/maps",
+  "theme_color": "#ff0000",
+  "lang": "en",
+  "icons": [
+    {
+      "sizes": "48x48",
+      "src": "icons/icon_48.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "72x72",
+      "src": "icons/icon_72.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "96x96",
+      "src": "icons/icon_96.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "144x144",
+      "src": "icons/icon_144.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "192x192",
+      "src": "icons/icon_192.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "512x512",
+      "src": "icons/icon_512.png",
+      "type": "image/png"
+    }
+  ]
+}
