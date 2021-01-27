@@ -8,7 +8,9 @@ const appShellFiles = [
   '/pwa-demos/minipwa/icons/icon_48.png',
   '/pwa-demos/minipwa/icons/icon_72.png',
   '/pwa-demos/minipwa/icons/icon_96.png',
+  '/pwa-demos/minipwa/icons/icon_120.png',
   '/pwa-demos/minipwa/icons/icon_144.png',
+  '/pwa-demos/minipwa/icons/icon_180.png',
   '/pwa-demos/minipwa/icons/icon_192.png',
   '/pwa-demos/minipwa/icons/icon_512.png',
 ];
