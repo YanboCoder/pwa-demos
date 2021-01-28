@@ -5,6 +5,8 @@ const appShellFiles = [
   '/index.html',
   '/app.js',
   '/style.css',
+  '/favicon.ico',
+  '/images/launch_1125x2436.png',
   '/icons/icon_48.png',
   '/icons/icon_72.png',
   '/icons/icon_96.png',
@@ -25,6 +27,7 @@ self.addEventListener('install', (e) => {
       return cache.addAll(contentToCache);
     })
   );
+  self.skipWaiting()
 });
 
 // Fetching content using Service Worker
