@@ -1,29 +1,30 @@
 // Files to cache
 const cacheName = 'minipwa-v1';
 const appShellFiles = [
-  '/pwa-demos/minipwa/',
-  '/pwa-demos/minipwa/index.html',
-  '/pwa-demos/minipwa/app.js',
-  '/pwa-demos/minipwa/style.css',
-  '/pwa-demos/minipwa/icons/icon_48.png',
-  '/pwa-demos/minipwa/icons/icon_72.png',
-  '/pwa-demos/minipwa/icons/icon_96.png',
-  '/pwa-demos/minipwa/icons/icon_120.png',
-  '/pwa-demos/minipwa/icons/icon_144.png',
-  '/pwa-demos/minipwa/icons/icon_180.png',
-  '/pwa-demos/minipwa/icons/icon_192.png',
-  '/pwa-demos/minipwa/icons/icon_512.png',
+  '/',
+  '/index.html',
+  '/app.js',
+  '/style.css',
+  '/icons/icon_48.png',
+  '/icons/icon_72.png',
+  '/icons/icon_96.png',
+  '/icons/icon_120.png',
+  '/icons/icon_144.png',
+  '/icons/icon_180.png',
+  '/icons/icon_192.png',
+  '/icons/icon_512.png',
 ];
 const contentToCache = appShellFiles;
 
 // Installing Service Worker
 self.addEventListener('install', (e) => {
   console.log('[Service Worker] Install');
-  e.waitUntil((async () => {
-    const cache = await cache.open(cacheName);
-    console.log('[Service Worker] Caching all: app shell');
-    await cache.addAll(contentToCache);
-  })());
+  e.waitUntil(
+    caches.open(cacheName).then((cache) => {
+      console.log('[Service Worker] Caching all: app shell');
+      return cache.addAll(contentToCache);
+    })
+  );
 });
 
 // Fetching content using Service Worker
