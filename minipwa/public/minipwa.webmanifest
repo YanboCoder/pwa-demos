@@ -3,7 +3,7 @@
   "short_name": "Mini PWA",
   "description": "Mini app to try PWA",
   "display": "standalone",
-  "start_url": "/index.html",
+  "start_url": "/pwa-demos/minipwa/public/index.html",
   "background_color": "#426898",
   "theme_color": "#ff0000",
   "lang": "en",
