@@ -1,5 +1,5 @@
 // Files to cache
-const cacheName = 'minipwa-v1';
+const cacheName = 'minipwa-v2';
 const appShellFiles = [
   '/pwa-demos/minipwa/public/',
   '/pwa-demos/minipwa/public/index.html',
