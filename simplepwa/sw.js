@@ -32,3 +32,9 @@ self.addEventListener('fetch', (e) => {
     return response;
   })());
 });
+
+self.addEventListener('Request', (e) => {
+  e.waitUntil(
+    caches.addAll(contentToCache)
+  )
+})
