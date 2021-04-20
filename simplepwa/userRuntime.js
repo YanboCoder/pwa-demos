@@ -8,6 +8,7 @@ EVENT_STREAM_PATH: "/___events___"
 (function (swwebviewSettings) {
 'use strict';
 
+// 用来继承自定义类和内置对象。例如 messageHandlers["SWWebView"] == messageHandlers.SWWebView
 function __extends(d, b) {
     for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
     function __() { this.constructor = d; }
@@ -16,6 +17,7 @@ function __extends(d, b) {
 
 // We can't read POST bodies in native code, so we're doing the super-gross:
 // putting it in a custom header. Hoping we can get rid of this nonsense soon.
+// 重写 fetch 方法，用来捕获 Post 请求并处理 body
 var originalFetch = fetch;
 function graftedFetch(request, opts) {
     if (!opts || !opts.body) {
