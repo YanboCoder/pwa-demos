@@ -4,5 +4,5 @@ if ('serviceWorker' in navigator) {
   //   console.log('navigator.serviceWorker.onmessage', event);
   // });
 
-	navigator.serviceWorker.register('./sw.js');
+	navigator.serviceWorker.register('/pwa-demos/minipwa/public/sw.js');
 }
