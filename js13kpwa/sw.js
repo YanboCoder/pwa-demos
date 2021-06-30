@@ -23,9 +23,9 @@ const appShellFiles = [
   '/pwa-demos/js13kpwa/icons/icon-512.png',
 ];
 const gamesImages = [];
-for (let i = 0; i < games.length; i++) {
-  gamesImages.push(`data/img/${games[i].slug}.jpg`);
-}
+// for (let i = 0; i < games.length; i++) {
+//   gamesImages.push(`data/img/${games[i].slug}.jpg`);
+// }
 const contentToCache = appShellFiles.concat(gamesImages);
 
 // Installing Service Worker
@@ -44,7 +44,7 @@ self.addEventListener('fetch', (e) => {
     const r = await caches.match(e.request);
     console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
     if (r) return r;
-    const response = await fetch(e.request.url);
+    const response = await fetch(e.request);
     const cache = await caches.open(cacheName);
     console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
     cache.put(e.request, response.clone());
