@@ -4,7 +4,7 @@
 // }
 
 try {
-	window.webkit.messageHandlers.SWWebView.postMessage({})
+	window.webkit.messageHandlers.SWWebView.postMessage('hello')
 } catch (error) {
 	console.log('postMessage error:', error)
 }
